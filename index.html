@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mortgage Calculator</title>
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <header id="title">
+      <h1>Mortgage Calculator</h1>
+    </header>
+    <hr />
+    <section>
+      <div>
+        <form class="form-cl" action="get">
+          <table>
+            <tr>
+              <td>
+                <label class="label-class" for="housePrice">House Price</label>
+              </td>
+              <td>
+                <input
+                  class="label-class"
+                  type="text"
+                  id="housePrice"
+                  name="housePrice"
+                  data-type="currency"
+                  required="required"
+                  placeholder="$"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="label-class" for="downPayment"
+                  >Down Payment</label
+                >
+              </td>
+              <td>
+                <input
+                  class="label-class"
+                  type="text"
+                  id="downPayment"
+                  name="downPayment"
+                  placeholder="$"
+                  required="required"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label class="label-class" for="downPmtPercent"
+                  >Down Payment %</label
+                >
+              </td>
+              <td>
+                <input
+                  class="label-class"
+                  type="number"
+                  id="downPmtPercent"
+                  name="downPmtPercent"
+                  disabled
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label class="label-class" for="loanAmount">Loan Amout</label>
+              </td>
+              <td>
+                <input
+                  class="label-class"
+                  type="text"
+                  id="loanAmount"
+                  name="loanAmount"
+                  disabled
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label class="label-class" for="mortgageTerm"
+                  >Mortgage Term:</label
+                >
+              </td>
+              <td>
+                <input
+                  class="label-class"
+                  type="radio"
+                  id="mortgageTerm-30"
+                  name="mortgageTerm"
+                  value="30"
+                  required="required"
+                />
+                <label class="label-class" for="mortgageTerm-30"
+                  >30 Years</label
+                >
+
+                <input
+                  class="label-class"
+                  type="radio"
+                  id="mortgageTerm-15"
+                  name="mortgageTerm"
+                  value="15"
+                  required="required"
+                />
+                <label class="label-class" for="mortgageTerm-15"
+                  >15 Years</label
+                >
+
+                <input
+                  class="label-class"
+                  type="radio"
+                  id="mortgageTerm-5"
+                  name="mortgageTerm"
+                  value="5"
+                  required="required"
+                />
+                <label class="label-class" for="mortgageTerm-5">5 Years</label>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label class="label-class" for="interestRate"
+                  >Interest Rate</label
+                >
+              </td>
+              <td>
+                <input
+                  class="label-class"
+                  type="number"
+                  id="interestRate"
+                  name="interestRate"
+                  step="0.01"
+                  min="0"
+                  max="20"
+                  required="required"
+                />%
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="label-class" for="startDate"
+                  >Mortgage Start Month</label
+                >
+              </td>
+              <td>
+                <input
+                  class="label-class"
+                  type="month"
+                  id="mortgageStartDate"
+                  name="mortgageStartDate"
+                  required="required"
+                />
+              </td>
+            </tr>
+          </table>
+          <br />
+          <button class="submit-btn btn" type="button">Calculate</button>
+        </form>
+        <img
+          class="mortgage-img"
+          src="images/mortgage-img.jpg"
+          alt="mortgage image"
+        />
+      </div>
+    </section>
+    <hr />
+
+    <!-- Table for monthly mortgage payment  -->
+    <section id="Mortgage-Payment-Table">
+      <table class="monthly-pmt-table">
+        <thead>
+          <tr>
+            <th>Payment Date</th>
+            <th>Monthly Payment</th>
+            <th>Principal Amount</th>
+            <th>Interest Amount</th>
+            <th>Total Interest Paid</th>
+            <th>Remaining Balance</th>
+          </tr>
+        </thead>
+
+        <tbody id="monthly-pmt"></tbody>
+      </table>
+    </section>
+  </body>
+</html>
