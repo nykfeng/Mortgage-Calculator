@@ -1,10 +1,35 @@
 body {
-  max-width: 1100px;
   font-family: Arial, "Times New Roman", Times, serif;
 }
 
 .form-cl {
   display: inline-block;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.monthly-pmt-table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.pmt-table-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#copyright {
+  text-align: center;
+}
+
+#title,
+#input-field,
+#Mortgage-Payment-Table {
+  border-top: 10px solid #80db7b;
+  background-color: #f7f7f7;
 }
 
 .label-class {
@@ -33,6 +58,7 @@ body {
   -webkit-border-radius: 36;
   -moz-border-radius: 36;
   border-radius: 36px;
+  border: none;
   font-family: Georgia;
   color: #ffffff;
   font-size: 20px;

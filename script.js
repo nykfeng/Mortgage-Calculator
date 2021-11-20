@@ -57,15 +57,15 @@ const Mortgage = class {
 
 // call back for clicking Submit button
 const calculateMortgage = function () {
+  let mortgageTerm;
+  mortgageTermEl.forEach((term) => {
+    if (term.checked) mortgageTerm = term.value;
+  }); // Loop through the radio input option to get the value
+
   const mortgage = new Mortgage(
     housePriceEl.value,
     downPaymentEl.value,
-    (() => {
-      for (mortgageTerm of mortgageTermEl) {
-        if (mortgageTerm.checked === true) return mortgageTerm.value;
-        else return undefined;
-      }
-    })(), // Loop through the radio input option to get the value
+    mortgageTerm,
     interestRateEl.value,
     mortgageStartDateEl.value
   );
