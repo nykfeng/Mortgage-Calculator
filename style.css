@@ -27,10 +27,6 @@ input {
   display: inline-block;
 }
 
-.main-container {
-  flex: 100%;
-}
-
 .main-container,
 .footer-container {
   max-width: 1100px;
